@@ -19,3 +19,7 @@ project/plugins/project/
 
 ### IDEA template
 .idea/
+
+### maven template
+spark-learning.iml
+
