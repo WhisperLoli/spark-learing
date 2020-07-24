@@ -19,7 +19,7 @@ object FutureLearning {
 
     // 最长等待9秒，线程睡眠10秒，等待超时，TimeoutException
     // Await.result(result, 9 seconds)
-     Await.result(result, atMost = 10 seconds)
+    Await.result(result, atMost = 10 seconds)
     if (result.isCompleted) {
       result.onComplete {
         case Success(value) => println(s"current value is  $value")
@@ -38,8 +38,15 @@ object FutureLearning {
 
     val taxCut = Promise[TaxCut]()
 
-    taxCut.success(TaxCut(20))
+    // taxCut被赋值后会直接走回调，如果没赋值，主线程结束就不会运行
+    taxCut.future.onComplete {
+      case Success(value) => println(s"start current taxCut is $value")
+      case Failure(error) => println(error)
+    }
 
+    // taxCut.success(TaxCut(20))
+
+    // 判断当前是否赋值，赋值后再回调
     if (taxCut.future.isCompleted) {
       taxCut.future.onComplete {
         case Success(value) => println(s"current taxCut is $value")
