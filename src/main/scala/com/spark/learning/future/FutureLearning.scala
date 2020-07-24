@@ -1,11 +1,9 @@
 package com.spark.learning.future
 
 import scala.concurrent.{Await, Future, Promise}
-import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.duration._
 import scala.util.{Failure, Success}
-
-
+import scala.concurrent.duration._
+import scala.concurrent.ExecutionContext.Implicits.global
 
 /**
   * learning Future，启用多线程执行，顺序不能保证，如果主线程执行完，停止任务，可能子线程还没进行
@@ -60,4 +58,3 @@ object FutureLearning {
     Thread.sleep(10000)
   }
 }
-
