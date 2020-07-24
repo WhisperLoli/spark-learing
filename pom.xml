@@ -10,6 +10,7 @@
 
     <properties>
         <metrics.version>4.1.0</metrics.version>
+        <akka.version>2.5.26</akka.version>
     </properties>
 
     <dependencies>
@@ -18,5 +19,13 @@
             <artifactId>metrics-core</artifactId>
             <version>${metrics.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.typesafe.akka/akka-actor -->
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor_2.11</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+
     </dependencies>
 </project>
