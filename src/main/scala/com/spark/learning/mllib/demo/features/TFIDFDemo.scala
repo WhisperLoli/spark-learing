@@ -1,4 +1,4 @@
-package com.spark.learning.mllib.demo.extractors
+package com.spark.learning.mllib.demo.features
 
 import com.spark.learning.mllib.demo._
 import org.apache.spark.ml.feature.{HashingTF, IDF, Tokenizer}
