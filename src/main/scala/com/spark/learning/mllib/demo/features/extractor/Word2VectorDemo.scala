@@ -1,4 +1,4 @@
-package com.spark.learning.mllib.demo.features.extract
+package com.spark.learning.mllib.demo.features.extractor
 
 import com.spark.learning.mllib.demo.spark
 import org.apache.spark.ml.feature.Word2Vec
