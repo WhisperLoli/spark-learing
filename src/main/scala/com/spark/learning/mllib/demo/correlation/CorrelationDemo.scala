@@ -1,7 +1,8 @@
-package com.spark.learning.mllib.demo
+package com.spark.learning.mllib.demo.correlation
 
-import org.apache.spark.ml.stat.{ChiSquareTest, Correlation}
+import com.spark.learning.mllib.demo.spark
 import org.apache.spark.ml.linalg.{Matrix, Vectors}
+import org.apache.spark.ml.stat.{ChiSquareTest, Correlation}
 import org.apache.spark.sql.Row
 
 /**

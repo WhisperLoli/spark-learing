@@ -1,5 +1,6 @@
-package com.spark.learning.mllib.demo
+package com.spark.learning.mllib.demo.association
 
+import com.spark.learning.mllib.demo.spark
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.internal.Logging
 import org.apache.spark.ml.fpm.FPGrowth
