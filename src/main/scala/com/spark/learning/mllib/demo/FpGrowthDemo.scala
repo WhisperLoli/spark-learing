@@ -1,5 +1,7 @@
 package com.spark.learning.mllib.demo
 
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.internal.Logging
 import org.apache.spark.ml.fpm.FPGrowth
 
 /**
@@ -27,10 +29,11 @@ import org.apache.spark.ml.fpm.FPGrowth
   *   AB -> C
   *
   */
-object FpGrowthDemo extends App {
+object FpGrowthDemo extends App with Logging {
   import spark.implicits._
 
-  spark.sparkContext.setLogLevel("WARN")
+  // 只设置spark的log级别为WARN，其他log级别为info
+  Logger.getLogger("org.apache.spark").setLevel(Level.WARN)
 
   val dataset = spark.createDataset(Seq(
     "1 2 5",
@@ -56,4 +59,6 @@ object FpGrowthDemo extends App {
   // transform examines the input items against all the association rules and summarize the
   // consequents as prediction
   model.transform(dataset).show()
+
+  log.info("finish")
 }
