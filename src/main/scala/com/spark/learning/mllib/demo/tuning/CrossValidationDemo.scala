@@ -60,6 +60,7 @@ object CrossValidationDemo extends App {
   // is areaUnderROC.
   val cv = new CrossValidator()
     .setEstimator(pipeline)
+    // 设置二分类评估器，LogisticRegression属于二分类
     .setEvaluator(new BinaryClassificationEvaluator)
     .setEstimatorParamMaps(paramGrid)
     .setNumFolds(2)  // Use 3+ in practice
