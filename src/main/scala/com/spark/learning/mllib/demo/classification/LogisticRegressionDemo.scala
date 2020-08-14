@@ -19,7 +19,9 @@ object LogisticRegressionDemo extends App {
     // ElasticNet混合参数 α 。如果α=0, 惩罚项是一个L2 penalty。
     // 如果α=1，它是一个L1 penalty。
     // 如果0<α<1，则是L1和L2的结果。缺省为0.0，为L2罚项
+    //  L1和L2是正则化项,又叫做罚项,是为了限制模型的参数,防止模型过拟合而加在损失函数后面的一项
     .setElasticNetParam(0.8)
+
 
   // Fit the model
   val lrModel = lr.fit(training)
