@@ -4,8 +4,9 @@ import com.spark.learning.mllib.demo.spark
 import org.apache.spark.ml.classification.LogisticRegression
 /**
   * Logistic回归
+  * 逻辑回归也会面临过拟合问题，所以我们也要考虑正则化
   * 优点：计算代价低，速度快，容易理解和实现。
-  * 缺点：容易欠拟合，分类和回归的精度不高
+  * 缺点：容易欠拟合，分类的精度不高
   */
 object LogisticRegressionDemo extends App {
   // Load training data
